@@ -6,6 +6,7 @@ namespace GP.Opgavesaet2.ViewModel
     public class Opgave21ViewModel : NotifyBase
     {
         private readonly Opgave21 _opgave21;
+        private int _nummer = 0;
 
         public Opgave21ViewModel()
         {
@@ -75,7 +76,29 @@ namespace GP.Opgavesaet2.ViewModel
             set { _opgave21.Max = value; }
         }
 
-        public int Antal { get; set; }
-        public int Føerste { get; set; }
+        public int Nummer
+        {
+            get { return _nummer; }
+            set { UpdateNummer(value); }
+        }
+
+        private void UpdateNummer(int value)
+        {
+            _nummer = value;
+            AntalForekomsterAfNummer = _opgave21.FindAntal(_opgave21.Numbers, value);
+            FøersteForekomstAfNummer = _opgave21.FindForste(_opgave21.Numbers, value);
+        }
+
+        public int AntalForekomsterAfNummer
+        {
+            get { return GetField<int>(); }
+            set { SetField(value); }
+        }
+
+        public int FøersteForekomstAfNummer
+        {
+            get { return GetField<int>(); }
+            set { SetField(value); }
+        }
     }
 }

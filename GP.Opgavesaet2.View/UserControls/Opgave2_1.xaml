@@ -29,9 +29,9 @@
                 <Label Content="3) Udsnit af tallene ud fra placering" />
                 <StackPanel Orientation="Horizontal">
                     <Label Width="40" Content="Fra: " />
-                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayFra}" />
+                    <TextBox Width="50" Text="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayFra}" />
                     <Label Width="40" Content="Til: " />
-                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayTil}" />
+                    <TextBox Width="50" Text="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayTil}" />
                 </StackPanel>
             </StackPanel>
             <Label Grid.Column="1" Grid.Row="2" Content="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArray}" />
@@ -39,16 +39,19 @@
                 <Label Content="4) Udsnit af tallene ud fra min max værdier" />
                 <StackPanel Orientation="Horizontal">
                     <Label Width="40" Content="Min: " />
-                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierMindsteVærdi}" />
+                    <TextBox Width="50" Text="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierMindsteVærdi}" />
                     <Label Width="40" Content="Max: " />
-                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierHøjesteVærdi}" />
+                    <TextBox Width="50" Text="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierHøjesteVærdi}" />
                 </StackPanel>
             </StackPanel>
             <Label Grid.Column="1" Grid.Row="3" Content="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdier}" />
-            <Label Grid.Column="0" Grid.Row="4" Content="5) Antal" />
-            <Label Grid.Column="1" Grid.Row="4" Content="{Binding Antal}" />
+            <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
+                <Label Content="5) Antal forekomster af nummeret" />
+                <TextBox Width="50" Text="{Binding Nummer}"/>
+            </StackPanel>
+            <Label Grid.Column="1" Grid.Row="4" Content="{Binding AntalForekomsterAfNummer}" />
             <Label Grid.Column="0" Grid.Row="5" Content="6) Første" />
-            <Label Grid.Column="1" Grid.Row="5" Content="{Binding Føerste}" />
+            <Label Grid.Column="1" Grid.Row="5" Content="{Binding FøersteForekomstAfNummer}" />
         </Grid>
     </DockPanel>
 </UserControl>

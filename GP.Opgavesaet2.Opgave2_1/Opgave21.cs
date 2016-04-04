@@ -8,6 +8,7 @@ namespace GP.Opgavesaet2.Opgave2_1
         private int _endPosition;
         private int _min;
         private int _max;
+        private int _number;
 
         public Opgave21()
         {
@@ -19,8 +20,8 @@ namespace GP.Opgavesaet2.Opgave2_1
             EndPosition = Numbers.Length - 1;
             UpdateNumbersWithinStartAndEndPosition();
 
-            Min = int.MinValue;
-            Max = int.MaxValue;
+            Min = 0;
+            Max = 50;
             UpdateNumbersAboveOrBelowMinAndMax();
         }
 
@@ -30,7 +31,7 @@ namespace GP.Opgavesaet2.Opgave2_1
             var numbers = new int[amount];
             for (var i = 0; i < amount; i++)
             {
-                numbers[i] = random.Next(-10, 21);
+                numbers[i] = random.Next(0, 100);
             }
             return numbers;
         }
@@ -100,6 +101,26 @@ namespace GP.Opgavesaet2.Opgave2_1
             NumbersAboveOrBelowMinAndMax = Numbers.OnlyAboveOrBelowMinAndMax(Min, Max);
             InvokeSomethingChanged();
         }
+
+        public Int32 FindAntal(Int32[] tabel, Int32 tal)
+        {
+            return tabel.OccurrencesOf(tal);
+        }
+
+        public Int32 FindForste(Int32[] tabel, Int32 tal)
+        {
+            try
+            {
+                return tabel.FirstPositionOf(tal);
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+        }
+
+        public int PositionOfFirstOccuranceOfNumber { get; private set; } = -1;
+        public int NumberOfOccurancesOfNumber { get; private set; } = -1;
 
         public event EventHandler SomethingChanged;
 
