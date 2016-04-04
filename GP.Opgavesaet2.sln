@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25029.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GP.Opgavesaet2.View", "GP.Opgavesaet2.View\GP.Opgavesaet2.View.csproj", "{68B36B23-0AEC-4389-8BBA-92DBE4EB200B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GP.Opgavesaet2.ViewModel", "GP.Opgavesaet2.ViewModel\GP.Opgavesaet2.ViewModel.csproj", "{4B5DCE1D-C385-4E64-9847-0B89A2A8D879}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GP.Opgavesaet2.Opgave2_1.Model", "GP.Opgavesaet2.Opgave2_1.Model\GP.Opgavesaet2.Opgave2_1.Model.csproj", "{8AA1EFDF-049D-4369-B11E-B640C1BB45F5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GP.Opgavesaet2.Opgave2_1.Model.Tests", "GP.Opgavesaet2.Opgave2_1.Model.Tests\GP.Opgavesaet2.Opgave2_1.Model.Tests.csproj", "{F8CB92CF-4F16-46ED-AD59-D2672C4E0BAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GP.Opgavesaet2.Opgave2_1", "GP.Opgavesaet2.Opgave2_1\GP.Opgavesaet2.Opgave2_1.csproj", "{8AA1EFDF-049D-4369-B11E-B640C1BB45F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{8AA1EFDF-049D-4369-B11E-B640C1BB45F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AA1EFDF-049D-4369-B11E-B640C1BB45F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AA1EFDF-049D-4369-B11E-B640C1BB45F5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8CB92CF-4F16-46ED-AD59-D2672C4E0BAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8CB92CF-4F16-46ED-AD59-D2672C4E0BAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8CB92CF-4F16-46ED-AD59-D2672C4E0BAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8CB92CF-4F16-46ED-AD59-D2672C4E0BAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

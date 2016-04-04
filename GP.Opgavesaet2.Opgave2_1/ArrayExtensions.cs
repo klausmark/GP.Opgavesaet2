@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GP.Opgavesaet2.Opgave2_1.Model
+namespace GP.Opgavesaet2.Opgave2_1
 {
     public static class ArrayExtensions
     {
