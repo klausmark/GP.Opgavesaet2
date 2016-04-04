@@ -1,6 +1,6 @@
 ﻿namespace GP.Opgavesaet2.ViewModel
 {
-    public class Class1
+    public class Opgave25ViewModel
     {
     }
 }
