@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B5DCE1D-C385-4E64-9847-0B89A2A8D879}</ProjectGuid>
+    <ProjectGuid>{998B0C23-291F-4494-8942-33400CC49242}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GP.Opgavesaet2.ViewModel</RootNamespace>
-    <AssemblyName>GP.Opgavesaet2.ViewModel</AssemblyName>
+    <RootNamespace>GP.Opgavesaet2.Opgave22</RootNamespace>
+    <AssemblyName>Opgave22</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,25 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayToPrettyStringExtension.cs" />
-    <Compile Include="NotifyBase.cs" />
-    <Compile Include="Opgave26ViewModel.cs" />
-    <Compile Include="Opgave21ViewModel.cs" />
-    <Compile Include="Opgave22ViewModel.cs" />
-    <Compile Include="Opgave23ViewModel.cs" />
-    <Compile Include="Opgave24ViewModel.cs" />
-    <Compile Include="Opgave25ViewModel.cs" />
+    <Compile Include="DistanceConverterAndInfo.cs" />
+    <Compile Include="DistanceConverterHandler.cs" />
+    <Compile Include="DistanceConverters\CentimetreConverter.cs" />
+    <Compile Include="DistanceConverterInformationAttribute.cs" />
+    <Compile Include="DistanceConverters\FootConverter.cs" />
+    <Compile Include="DistanceConverters\KilometreConverter.cs" />
+    <Compile Include="DistanceConverters\MetreConverter.cs" />
+    <Compile Include="IDistanceConverter.cs" />
+    <Compile Include="DistanceConverters\InchConverter.cs" />
+    <Compile Include="DistanceConverters\MileConverter.cs" />
+    <Compile Include="DistanceConverters\NauticalMileConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GP.Opgavesaet2.Opgave22\GP.Opgavesaet2.Opgave22.csproj">
-      <Project>{998b0c23-291f-4494-8942-33400cc49242}</Project>
-      <Name>GP.Opgavesaet2.Opgave22</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GP.Opgavesaet2.Opgave2_1\GP.Opgavesaet2.Opgave21.csproj">
-      <Project>{8aa1efdf-049d-4369-b11e-b640c1bb45f5}</Project>
-      <Name>GP.Opgavesaet2.Opgave21</Name>
-    </ProjectReference>
+    <Compile Include="DistanceConverters\YardConverter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,5 +8,13 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.2 - Imperial to metric"/>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox MinWidth="50" Text="{Binding FromDistanceValue}"/>
+                <ComboBox ItemsSource="{Binding DistanceSuffixes}" SelectedItem="{Binding FromDistanceSuffix}" />
+                <Label MinWidth="30"  Content="{Binding DistanceResult, StringFormat='0:0.00'}"/>
+                <ComboBox ItemsSource="{Binding DistanceSuffixes}" SelectedItem="{Binding ToDistanceSuffix}" />
+            </StackPanel>
+        </StackPanel>
     </DockPanel>
 </UserControl>

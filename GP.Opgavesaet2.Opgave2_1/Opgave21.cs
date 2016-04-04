@@ -8,7 +8,6 @@ namespace GP.Opgavesaet2.Opgave2_1
         private int _endPosition;
         private int _min;
         private int _max;
-        private int _number;
 
         public Opgave21()
         {
