@@ -54,6 +54,10 @@
     <Compile Include="DistanceConverters\CentimetreConverter.cs" />
     <Compile Include="ConverterInformationAttribute.cs" />
     <Compile Include="DistanceConverters\FootConverter.cs" />
+    <Compile Include="VolumeConverters\IVolumeConverter.cs" />
+    <Compile Include="WeightConverters\GramWeightConverter.cs" />
+    <Compile Include="WeightConverters\HundredweightWeightConverter.cs" />
+    <Compile Include="WeightConverters\IWeightConverter.cs" />
     <Compile Include="DistanceConverters\KilometreConverter.cs" />
     <Compile Include="DistanceConverters\MetreConverter.cs" />
     <Compile Include="DistanceConverters\IDistanceConverter.cs" />
@@ -62,11 +66,12 @@
     <Compile Include="DistanceConverters\NauticalMileConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DistanceConverters\YardConverter.cs" />
+    <Compile Include="WeightConverters\OunceWeightConverter.cs" />
+    <Compile Include="WeightConverters\PoundWeightConverter.cs" />
+    <Compile Include="WeightConverters\StoneWeightConverter.cs" />
+    <Compile Include="WeightConverters\TonWeightConverter.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VolumeConverters\" />
-    <Folder Include="WeightConverters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
