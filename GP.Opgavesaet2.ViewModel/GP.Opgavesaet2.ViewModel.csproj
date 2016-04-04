@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayToPrettyStringExtension.cs" />
+    <Compile Include="NotifyBase.cs" />
     <Compile Include="Opgave26ViewModel.cs" />
     <Compile Include="Opgave21ViewModel.cs" />
     <Compile Include="Opgave22ViewModel.cs" />
@@ -47,6 +49,12 @@
     <Compile Include="Opgave24ViewModel.cs" />
     <Compile Include="Opgave25ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GP.Opgavesaet2.Opgave2_1\GP.Opgavesaet2.Opgave2_1.csproj">
+      <Project>{8aa1efdf-049d-4369-b11e-b640c1bb45f5}</Project>
+      <Name>GP.Opgavesaet2.Opgave2_1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
