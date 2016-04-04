@@ -15,6 +15,12 @@
                 <Label MinWidth="30"  Content="{Binding DistanceResult, StringFormat='0:0.00'}"/>
                 <ComboBox ItemsSource="{Binding DistanceSuffixes}" SelectedItem="{Binding ToDistanceSuffix}" />
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBox MinWidth="50" Text="{Binding FromAreaValue}"/>
+                <ComboBox ItemsSource="{Binding AreaSuffixes}" SelectedItem="{Binding FromAreaSuffix}" />
+                <Label MinWidth="30"  Content="{Binding AreaResult, StringFormat='0:0.00'}"/>
+                <ComboBox ItemsSource="{Binding AreaSuffixes}" SelectedItem="{Binding ToAreaSuffix}" />
+            </StackPanel>
         </StackPanel>
     </DockPanel>
 </UserControl>

@@ -14,7 +14,7 @@ namespace GP.Opgavesaet2.Opgave22
         {
             return Assembly.GetExecutingAssembly()
                 .GetTypes()
-                .Where(type => type.GetInterface(nameof(T)) != null)
+                .Where(type => type.GetInterface(typeof (T).Name) != null)
                 .Where(type => type.GetCustomAttributes<ConverterInformationAttribute>() != null)
                 .Select(type => new ConverterAndInfo<T>
                 {

@@ -123,7 +123,7 @@ namespace GP.Opgavesaet2.ViewModel
             if (FromAreaSuffix == null || ToAreaSuffix == null) return;
 
             var universalValue = _areaConverterController.GetConverter(FromAreaSuffix).ConvertToUniversalArea(_fromAreaValue);
-            DistanceResult = _areaConverterController.GetConverter(ToAreaSuffix).ConvertFromUniversalArea(universalValue);
+            AreaResult = _areaConverterController.GetConverter(ToAreaSuffix).ConvertFromUniversalArea(universalValue);
         }
     }
 }

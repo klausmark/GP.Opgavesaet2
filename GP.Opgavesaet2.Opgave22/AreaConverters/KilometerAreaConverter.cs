@@ -1,6 +1,7 @@
 ﻿namespace GP.Opgavesaet2.Opgave22.AreaConverters
 {
-    public class SquareKilometerAreaConverter : IAreaConverter
+    [ConverterInformation("km\u00b2")]
+    public class KilometerAreaConverter : IAreaConverter
     {
         public decimal ConvertFromUniversalArea(decimal universalArea)
         {
