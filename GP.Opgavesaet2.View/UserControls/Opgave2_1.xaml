@@ -8,5 +8,47 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.1 - Lidt array-gymnastik"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Content="1) 50 tilfældige tal" />
+            <Label Grid.Column="1" Grid.Row="0" Content="{Binding TilfældigeTal}" />
+            <Label Grid.Column="0" Grid.Row="1" Content="2) Tallene i omvendt rækkefølge" />
+            <Label Grid.Column="1" Grid.Row="1" Content="{Binding TilfældigeTalIOmvendtRækkefølge}" />
+            <StackPanel Grid.Column="0" Grid.Row="2" >
+                <Label Content="3) Udsnit af tallene ud fra placering" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Width="40" Content="Fra: " />
+                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayFra}" />
+                    <Label Width="40" Content="Til: " />
+                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayTil}" />
+                </StackPanel>
+            </StackPanel>
+            <Label Grid.Column="1" Grid.Row="2" Content="{Binding UdsnitAfDeTilfældigeTalUdFraPlaceringIArray}" />
+            <StackPanel Grid.Column="0" Grid.Row="3" >
+                <Label Content="4) Udsnit af tallene ud fra min max værdier" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Width="40" Content="Min: " />
+                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierMindsteVærdi}" />
+                    <Label Width="40" Content="Max: " />
+                    <TextBox Width="30" Text="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierHøjesteVærdi}" />
+                </StackPanel>
+            </StackPanel>
+            <Label Grid.Column="1" Grid.Row="3" Content="{Binding UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdier}" />
+            <Label Grid.Column="0" Grid.Row="4" Content="5) Antal" />
+            <Label Grid.Column="1" Grid.Row="4" Content="{Binding Antal}" />
+            <Label Grid.Column="0" Grid.Row="5" Content="6) Første" />
+            <Label Grid.Column="1" Grid.Row="5" Content="{Binding Føerste}" />
+        </Grid>
     </DockPanel>
 </UserControl>
