@@ -51,13 +51,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GP.Opgavesaet2.Opgave21\GP.Opgavesaet2.Opgave21.csproj">
+      <Project>{8aa1efdf-049d-4369-b11e-b640c1bb45f5}</Project>
+      <Name>GP.Opgavesaet2.Opgave21</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GP.Opgavesaet2.Opgave22\GP.Opgavesaet2.Opgave22.csproj">
       <Project>{998b0c23-291f-4494-8942-33400cc49242}</Project>
       <Name>GP.Opgavesaet2.Opgave22</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GP.Opgavesaet2.Opgave2_1\GP.Opgavesaet2.Opgave21.csproj">
-      <Project>{8aa1efdf-049d-4369-b11e-b640c1bb45f5}</Project>
-      <Name>GP.Opgavesaet2.Opgave21</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

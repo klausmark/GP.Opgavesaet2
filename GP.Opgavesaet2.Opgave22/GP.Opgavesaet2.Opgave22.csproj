@@ -41,20 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DistanceConverterAndInfo.cs" />
-    <Compile Include="DistanceConverterHandler.cs" />
+    <Compile Include="AreaConverters\IAreaConverter.cs" />
+    <Compile Include="AreaConverters\SquareKilometerAreaConverter.cs" />
+    <Compile Include="AreaConverters\SquareMeterAreaConverter.cs" />
+    <Compile Include="ConverterController.cs" />
+    <Compile Include="ConverterAndInfo.cs" />
     <Compile Include="DistanceConverters\CentimetreConverter.cs" />
-    <Compile Include="DistanceConverterInformationAttribute.cs" />
+    <Compile Include="ConverterInformationAttribute.cs" />
     <Compile Include="DistanceConverters\FootConverter.cs" />
     <Compile Include="DistanceConverters\KilometreConverter.cs" />
     <Compile Include="DistanceConverters\MetreConverter.cs" />
-    <Compile Include="IDistanceConverter.cs" />
+    <Compile Include="DistanceConverters\IDistanceConverter.cs" />
     <Compile Include="DistanceConverters\InchConverter.cs" />
     <Compile Include="DistanceConverters\MileConverter.cs" />
     <Compile Include="DistanceConverters\NauticalMileConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DistanceConverters\YardConverter.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

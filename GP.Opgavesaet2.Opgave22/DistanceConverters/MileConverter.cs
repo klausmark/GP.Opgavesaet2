@@ -1,16 +1,16 @@
 namespace GP.Opgavesaet2.Opgave22.DistanceConverters
 {
-    [DistanceConverterInformation("mi")]
+    [ConverterInformation("mi")]
     public class MileConverter : IDistanceConverter
     {
-        public decimal ConvertFrom(decimal universalDistance)
+        public decimal ConvertFromUniversalDistance(decimal universalDistance)
         {
-            return universalDistance * 160934.4m;
+            return universalDistance/1609.344m;
         }
 
         public decimal ConvertToUniversalDistance(decimal distance)
         {
-            return distance / 160934.4m;
+            return distance*1609.344m;
         }
     }
 }

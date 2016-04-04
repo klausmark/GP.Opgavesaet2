@@ -1,16 +1,16 @@
 namespace GP.Opgavesaet2.Opgave22.DistanceConverters
 {
-    [DistanceConverterInformation("yd")]
+    [ConverterInformation("yd")]
     public class YardConverter : IDistanceConverter
     {
-        public decimal ConvertFrom(decimal universalDistance)
+        public decimal ConvertFromUniversalDistance(decimal universalDistance)
         {
-            return universalDistance * 91.44m;
+            return universalDistance/0.9144m;
         }
 
         public decimal ConvertToUniversalDistance(decimal distance)
         {
-            return distance / 91.44m;
+            return distance*0.9144m;
         }
     }
 }

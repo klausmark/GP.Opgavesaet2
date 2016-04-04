@@ -1,23 +1,23 @@
 ﻿using System;
-using GP.Opgavesaet2.Opgave2_1;
+using GP.Opgavesaet2.Opgave21;
 
 namespace GP.Opgavesaet2.ViewModel
 {
     public class Opgave21ViewModel : NotifyBase
     {
-        private readonly Opgave21 _opgave21;
-        private int _nummer = 0;
+        private readonly Opgave21Solution _opgave21Solution;
+        private int _nummer;
 
         public Opgave21ViewModel()
         {
-            _opgave21 = new Opgave21();
+            _opgave21Solution = new Opgave21Solution();
 
-            TilfældigeTal = _opgave21.Numbers.ToPrettyString();
-            TilfældigeTalIOmvendtRækkefølge = _opgave21.NumbersReversed.ToPrettyString();
+            TilfældigeTal = _opgave21Solution.Numbers.ToPrettyString();
+            TilfældigeTalIOmvendtRækkefølge = _opgave21Solution.NumbersReversed.ToPrettyString();
 
             OpdaterVærdierMedOpgave21();
 
-            _opgave21.SomethingChanged += _opgave21_SomethingChanged;
+            _opgave21Solution.SomethingChanged += _opgave21_SomethingChanged;
         }
 
         private void _opgave21_SomethingChanged(object sender, EventArgs e)
@@ -28,9 +28,9 @@ namespace GP.Opgavesaet2.ViewModel
         private void OpdaterVærdierMedOpgave21()
         {
             UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdier =
-                _opgave21.NumbersAboveOrBelowMinAndMax.ToPrettyString();
+                _opgave21Solution.NumbersAboveOrBelowMinAndMax.ToPrettyString();
             UdsnitAfDeTilfældigeTalUdFraPlaceringIArray = 
-                _opgave21.NumbersWithinStartAndEndPosition.ToPrettyString();
+                _opgave21Solution.NumbersWithinStartAndEndPosition.ToPrettyString();
         }
 
         public string TilfældigeTal
@@ -48,14 +48,14 @@ namespace GP.Opgavesaet2.ViewModel
 
         public int UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayFra
         {
-            get { return _opgave21.StartPosition; }
-            set { _opgave21.StartPosition = value; }
+            get { return _opgave21Solution.StartPosition; }
+            set { _opgave21Solution.StartPosition = value; }
         }
 
         public int UdsnitAfDeTilfældigeTalUdFraPlaceringIArrayTil
         {
-            get { return _opgave21.EndPosition; }
-            set { _opgave21.EndPosition = value; }
+            get { return _opgave21Solution.EndPosition; }
+            set { _opgave21Solution.EndPosition = value; }
         }
 
         public string UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdier
@@ -66,14 +66,14 @@ namespace GP.Opgavesaet2.ViewModel
 
         public int UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierMindsteVærdi
         {
-            get { return _opgave21.Min; }
-            set { _opgave21.Min = value; }
+            get { return _opgave21Solution.Min; }
+            set { _opgave21Solution.Min = value; }
         }
 
         public int UdsnitAfDeTilfældigeTalUdFraHøjesteOgMindsteVærdierHøjesteVærdi
         {
-            get { return _opgave21.Max; }
-            set { _opgave21.Max = value; }
+            get { return _opgave21Solution.Max; }
+            set { _opgave21Solution.Max = value; }
         }
 
         public int Nummer
@@ -85,8 +85,8 @@ namespace GP.Opgavesaet2.ViewModel
         private void UpdateNummer(int value)
         {
             _nummer = value;
-            AntalForekomsterAfNummer = _opgave21.FindAntal(_opgave21.Numbers, value);
-            FøersteForekomstAfNummer = _opgave21.FindForste(_opgave21.Numbers, value);
+            AntalForekomsterAfNummer = _opgave21Solution.FindAntal(_opgave21Solution.Numbers, value);
+            FøersteForekomstAfNummer = _opgave21Solution.FindForste(_opgave21Solution.Numbers, value);
         }
 
         public int AntalForekomsterAfNummer

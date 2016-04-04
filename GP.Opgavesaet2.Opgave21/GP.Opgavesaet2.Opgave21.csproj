@@ -7,8 +7,8 @@
     <ProjectGuid>{8AA1EFDF-049D-4369-B11E-B640C1BB45F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GP.Opgavesaet2.Opgave2_1</RootNamespace>
-    <AssemblyName>Opgave2_1</AssemblyName>
+    <RootNamespace>GP.Opgavesaet2.Opgave21</RootNamespace>
+    <AssemblyName>Opgave21</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,11 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayExtensions.cs" />
-    <Compile Include="Opgave21.cs" />
+    <Compile Include="Opgave21Solution.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="OpgaveBeskrivelse.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

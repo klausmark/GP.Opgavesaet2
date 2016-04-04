@@ -1,15 +1,15 @@
 using System;
 
-namespace GP.Opgavesaet2.Opgave2_1
+namespace GP.Opgavesaet2.Opgave21
 {
-    public class Opgave21
+    public class Opgave21Solution
     {
         private int _startPosition;
         private int _endPosition;
         private int _min;
         private int _max;
 
-        public Opgave21()
+        public Opgave21Solution()
         {
             Numbers = GetThisAmountOfRandomNumbers(50);
 

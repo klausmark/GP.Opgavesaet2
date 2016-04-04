@@ -1,16 +1,16 @@
 ﻿namespace GP.Opgavesaet2.Opgave22.DistanceConverters
 {
-    [DistanceConverterInformation("cm")]
+    [ConverterInformation("cm")]
     public class CentimetreConverter : IDistanceConverter
     {
-        public decimal ConvertFrom(decimal universalDistance)
+        public decimal ConvertFromUniversalDistance(decimal universalDistance)
         {
-            return universalDistance;
+            return universalDistance * 100m;
         }
 
         public decimal ConvertToUniversalDistance(decimal distance)
         {
-            return distance;
+            return distance / 100m;
         }
     }
 }

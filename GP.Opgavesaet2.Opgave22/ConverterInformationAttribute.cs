@@ -2,9 +2,9 @@ using System;
 
 namespace GP.Opgavesaet2.Opgave22
 {
-    public class DistanceConverterInformationAttribute : Attribute
+    public class ConverterInformationAttribute : Attribute
     {
-        public DistanceConverterInformationAttribute(string suffix)
+        public ConverterInformationAttribute(string suffix)
         {
             Suffix = suffix;
         }

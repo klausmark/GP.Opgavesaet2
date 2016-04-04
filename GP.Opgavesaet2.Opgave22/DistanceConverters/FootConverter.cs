@@ -1,16 +1,16 @@
 namespace GP.Opgavesaet2.Opgave22.DistanceConverters
 {
-    [DistanceConverterInformation("ft")]
+    [ConverterInformation("ft")]
     public class FootConverter : IDistanceConverter
     {
-        public decimal ConvertFrom(decimal universalDistance)
+        public decimal ConvertFromUniversalDistance(decimal universalDistance)
         {
-            return universalDistance * 30.48m;
+            return universalDistance / 0.3048m;
         }
 
         public decimal ConvertToUniversalDistance(decimal distance)
         {
-            return distance / 30.48m;
+            return distance * 0.3048m;
         }
     }
 }
