@@ -55,7 +55,17 @@
     <Compile Include="ConverterInformationAttribute.cs" />
     <Compile Include="DistanceConverters\FootConverter.cs" />
     <Compile Include="IConverter.cs" />
+    <Compile Include="VolumeConverters\CentimetreVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\FluidOunceImperialVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\FluidOunceUSVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\FootVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\GallonImperialVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\GallonUSVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\InchVolumeConverter.cs" />
     <Compile Include="VolumeConverters\IVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\LitreVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\PintImperialVolumeConverter.cs" />
+    <Compile Include="VolumeConverters\PintUSVolumeConverter.cs" />
     <Compile Include="WeightConverters\GramWeightConverter.cs" />
     <Compile Include="WeightConverters\HundredweightWeightConverter.cs" />
     <Compile Include="WeightConverters\IWeightConverter.cs" />
