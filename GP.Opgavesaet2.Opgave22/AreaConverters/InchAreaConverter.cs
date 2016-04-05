@@ -3,14 +3,14 @@
     [ConverterInformation("in\u00b2")]
     public class InchAreaConverter : IAreaConverter
     {
-        public decimal ConvertFromUniversalArea(decimal universalArea)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalArea/0.000645m;
+            return universalValue/0.000645m;
         }
 
-        public decimal ConvertToUniversalArea(decimal area)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return area*0.000645m;
+            return value*0.000645m;
         }
     }
 }

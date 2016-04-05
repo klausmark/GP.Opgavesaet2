@@ -3,14 +3,14 @@
     [ConverterInformation("m\u00b2")]
     public class MeterAreaConverter : IAreaConverter
     {
-        public decimal ConvertFromUniversalArea(decimal universalArea)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalArea;
+            return universalValue;
         }
 
-        public decimal ConvertToUniversalArea(decimal area)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return area;
+            return value;
         }
     }
 }

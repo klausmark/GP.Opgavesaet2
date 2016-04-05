@@ -3,14 +3,14 @@
     [ConverterInformation("cm")]
     public class CentimetreConverter : IDistanceConverter
     {
-        public decimal ConvertFromUniversalDistance(decimal universalDistance)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalDistance * 100m;
+            return universalValue * 100m;
         }
 
-        public decimal ConvertToUniversalDistance(decimal distance)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return distance / 100m;
+            return value / 100m;
         }
     }
 }

@@ -54,6 +54,7 @@
     <Compile Include="DistanceConverters\CentimetreConverter.cs" />
     <Compile Include="ConverterInformationAttribute.cs" />
     <Compile Include="DistanceConverters\FootConverter.cs" />
+    <Compile Include="IConverter.cs" />
     <Compile Include="VolumeConverters\IVolumeConverter.cs" />
     <Compile Include="WeightConverters\GramWeightConverter.cs" />
     <Compile Include="WeightConverters\HundredweightWeightConverter.cs" />

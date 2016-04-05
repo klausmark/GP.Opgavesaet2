@@ -3,14 +3,14 @@
     [ConverterInformation("km")]
     public class KilometreConverter : IDistanceConverter
     {
-        public decimal ConvertFromUniversalDistance(decimal universalDistance)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalDistance / 1000;
+            return universalValue / 1000;
         }
 
-        public decimal ConvertToUniversalDistance(decimal distance)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return distance * 1000;
+            return value * 1000;
         }
     }
 }

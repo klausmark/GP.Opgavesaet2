@@ -3,14 +3,14 @@
     [ConverterInformation("ton")]
     public class TonWeightConverter : IWeightConverter
     {
-        public decimal ConvertFromUniversalWeight(decimal universalWeight)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalWeight/14224896;
+            return universalValue/14224896;
         }
 
-        public decimal ConvertToUniversalWeight(decimal weight)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return weight*14224896;
+            return value*14224896;
         }
     }
 }

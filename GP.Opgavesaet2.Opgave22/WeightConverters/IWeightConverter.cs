@@ -1,8 +1,6 @@
 ﻿namespace GP.Opgavesaet2.Opgave22.WeightConverters
 {
-    public interface IWeightConverter
+    public interface IWeightConverter : IConverter
     {
-        decimal ConvertFromUniversalWeight(decimal universalWeight);
-        decimal ConvertToUniversalWeight(decimal weight);
     }
 }

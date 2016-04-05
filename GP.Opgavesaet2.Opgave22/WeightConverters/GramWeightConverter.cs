@@ -3,14 +3,14 @@
     [ConverterInformation("g")]
     public class GramWeightConverter : IWeightConverter
     {
-        public decimal ConvertFromUniversalWeight(decimal universalWeight)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalWeight;
+            return universalValue;
         }
 
-        public decimal ConvertToUniversalWeight(decimal weight)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return weight;
+            return value;
         }
     }
 }

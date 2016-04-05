@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using GP.Opgavesaet2.Opgave22.DistanceConverters;
 
 namespace GP.Opgavesaet2.Opgave22
 {
@@ -12,15 +11,20 @@ namespace GP.Opgavesaet2.Opgave22
 
         private IEnumerable<ConverterAndInfo<T>> GetConverters()
         {
-            return Assembly.GetExecutingAssembly()
-                .GetTypes()
-                .Where(type => type.GetInterface(typeof (T).Name) != null)
-                .Where(type => type.GetCustomAttributes<ConverterInformationAttribute>() != null)
-                .Select(type => new ConverterAndInfo<T>
-                {
-                    Converter = (T) Activator.CreateInstance(type),
-                    ConverterInformationAttribute = type.GetCustomAttribute<ConverterInformationAttribute>()
-                });
+            var convertersAndInfo = new List<ConverterAndInfo<T>>();
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                convertersAndInfo.AddRange(assembly
+                    .GetTypes()
+                    .Where(type => type.GetInterface(typeof(T).Name) != null)
+                    .Where(type => type.GetCustomAttributes<ConverterInformationAttribute>() != null)
+                    .Select(type => new ConverterAndInfo<T>
+                    {
+                        Converter = (T)Activator.CreateInstance(type),
+                        ConverterInformationAttribute = type.GetCustomAttribute<ConverterInformationAttribute>()
+                    }));
+            }
+            return convertersAndInfo;
         }
 
         public void UpdateConverters()

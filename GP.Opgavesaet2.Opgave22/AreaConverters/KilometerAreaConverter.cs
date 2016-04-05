@@ -3,14 +3,14 @@
     [ConverterInformation("km\u00b2")]
     public class KilometerAreaConverter : IAreaConverter
     {
-        public decimal ConvertFromUniversalArea(decimal universalArea)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalArea/1000000;
+            return universalValue/1000000;
         }
 
-        public decimal ConvertToUniversalArea(decimal area)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return area*1000000;
+            return value*1000000;
         }
     }
 }

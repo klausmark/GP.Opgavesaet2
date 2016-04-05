@@ -3,14 +3,14 @@
     [ConverterInformation("cm\u00b2")]
     public class CentimeterAreaConverter : IAreaConverter
     {
-        public decimal ConvertFromUniversalArea(decimal universalArea)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalArea*10000;
+            return universalValue*10000;
         }
 
-        public decimal ConvertToUniversalArea(decimal area)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return area/10000;
+            return value/10000;
         }
     }
 }

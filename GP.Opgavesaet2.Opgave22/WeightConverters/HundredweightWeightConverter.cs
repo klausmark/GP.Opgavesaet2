@@ -3,14 +3,14 @@
     [ConverterInformation("cwt")]
     public class HundredweightWeightConverter : IWeightConverter
     {
-        public decimal ConvertFromUniversalWeight(decimal universalWeight)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalWeight/117244.8m;
+            return universalValue/117244.8m;
         }
 
-        public decimal ConvertToUniversalWeight(decimal weight)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return weight*117244.8m;
+            return value*117244.8m;
         }
     }
 }

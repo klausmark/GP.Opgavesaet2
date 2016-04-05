@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayToPrettyStringExtension.cs" />
+    <Compile Include="ConverterViewModel.cs" />
     <Compile Include="NotifyBase.cs" />
     <Compile Include="Opgave26ViewModel.cs" />
     <Compile Include="Opgave21ViewModel.cs" />

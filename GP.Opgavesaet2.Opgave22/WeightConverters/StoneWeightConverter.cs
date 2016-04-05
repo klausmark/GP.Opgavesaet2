@@ -3,14 +3,14 @@
     [ConverterInformation("stone")]
     public class StoneWeightConverter : IWeightConverter
     {
-        public decimal ConvertFromUniversalWeight(decimal universalWeight)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalWeight/6350.4m;
+            return universalValue/6350.4m;
         }
 
-        public decimal ConvertToUniversalWeight(decimal weight)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return weight*6350.4m;
+            return value*6350.4m;
         }
     }
 }

@@ -3,14 +3,14 @@ namespace GP.Opgavesaet2.Opgave22.DistanceConverters
     [ConverterInformation("nm")]
     public class NauticalMileConverter : IDistanceConverter
     {
-        public decimal ConvertFromUniversalDistance(decimal universalDistance)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalDistance/1852m;
+            return universalValue/1852m;
         }
 
-        public decimal ConvertToUniversalDistance(decimal distance)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return distance*1852m;
+            return value*1852m;
         }
     }
 }

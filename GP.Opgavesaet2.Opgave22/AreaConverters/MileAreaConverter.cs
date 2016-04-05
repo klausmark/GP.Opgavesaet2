@@ -3,14 +3,14 @@
     [ConverterInformation("mi\u00b2")]
     public class MileAreaConverter : IAreaConverter
     {
-        public decimal ConvertFromUniversalArea(decimal universalArea)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalArea/2589988;
+            return universalValue/2589988;
         }
 
-        public decimal ConvertToUniversalArea(decimal area)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return area*2589988;
+            return value*2589988;
         }
     }
 }

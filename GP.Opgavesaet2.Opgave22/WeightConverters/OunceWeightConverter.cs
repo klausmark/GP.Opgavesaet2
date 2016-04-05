@@ -3,14 +3,14 @@
     [ConverterInformation("oz")]
     public class OunceWeightConverter : IWeightConverter
     {
-        public decimal ConvertFromUniversalWeight(decimal universalWeight)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalWeight/28.35m;
+            return universalValue/28.35m;
         }
 
-        public decimal ConvertToUniversalWeight(decimal weight)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return weight*28.35m;
+            return value*28.35m;
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿namespace GP.Opgavesaet2.Opgave22.DistanceConverters
 {
-    public interface IDistanceConverter
+    public interface IDistanceConverter : IConverter
     {
-        decimal ConvertFromUniversalDistance(decimal universalDistance);
-        decimal ConvertToUniversalDistance(decimal distance);
     }
 }

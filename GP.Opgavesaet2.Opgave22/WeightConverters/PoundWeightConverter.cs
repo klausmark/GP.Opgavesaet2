@@ -3,14 +3,14 @@
     [ConverterInformation("lb")]
     public class PoundWeightConverter : IWeightConverter
     {
-        public decimal ConvertFromUniversalWeight(decimal universalWeight)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalWeight/453.6m;
+            return universalValue/453.6m;
         }
 
-        public decimal ConvertToUniversalWeight(decimal weight)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return weight*453.6m;
+            return value*453.6m;
         }
     }
 }

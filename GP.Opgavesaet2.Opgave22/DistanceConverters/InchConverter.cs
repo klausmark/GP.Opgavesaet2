@@ -3,14 +3,14 @@
     [ConverterInformation("in")]
     public class InchConverter : IDistanceConverter
     {
-        public decimal ConvertFromUniversalDistance(decimal universalDistance)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalDistance/0.0254m;
+            return universalValue/0.0254m;
         }
 
-        public decimal ConvertToUniversalDistance(decimal distance)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return distance*0.0254m;
+            return value*0.0254m;
         }
     }
 }

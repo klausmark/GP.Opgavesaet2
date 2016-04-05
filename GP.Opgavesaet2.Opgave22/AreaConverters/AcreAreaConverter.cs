@@ -3,14 +3,14 @@
     [ConverterInformation("acre")]
     public class AcreAreaConverter : IAreaConverter
     {
-        public decimal ConvertFromUniversalArea(decimal universalArea)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalArea/4046.856m;
+            return universalValue/4046.856m;
         }
 
-        public decimal ConvertToUniversalArea(decimal area)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return area*4046.856m;
+            return value*4046.856m;
         }
     }
 }

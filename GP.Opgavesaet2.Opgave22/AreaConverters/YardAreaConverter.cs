@@ -3,14 +3,14 @@
     [ConverterInformation("yd\u00b2")]
     public class YardAreaConverter : IAreaConverter
     {
-        public decimal ConvertFromUniversalArea(decimal universalArea)
+        public decimal ConvertFromUniversalValue(decimal universalValue)
         {
-            return universalArea/0.836127m;
+            return universalValue/0.836127m;
         }
 
-        public decimal ConvertToUniversalArea(decimal area)
+        public decimal ConvertToUniversalValue(decimal value)
         {
-            return area*0.836127m;
+            return value*0.836127m;
         }
     }
 }
