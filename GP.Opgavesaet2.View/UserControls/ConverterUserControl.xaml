@@ -14,7 +14,7 @@
         </Grid.ColumnDefinitions>
         <TextBox Grid.Column="0" MinWidth="50" Text="{Binding FromValue}"/>
         <ComboBox Grid.Column="1" MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding FromSuffix}" />
-        <Label Grid.Column="2" MinWidth="30" Content="{Binding Result, StringFormat='0:0.00'}" />
+        <TextBlock Grid.Column="2" MinWidth="30" Text="{Binding Result, ConverterCulture='da-DK', StringFormat=N2}" />
         <ComboBox Grid.Column="3" MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding ToSuffix}" />
     </Grid>
 </UserControl>
