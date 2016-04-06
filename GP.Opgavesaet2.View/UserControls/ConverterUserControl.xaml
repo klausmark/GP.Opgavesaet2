@@ -9,12 +9,14 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition MinWidth="100" MaxWidth="200"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Column="0" MinWidth="50" Text="{Binding FromValue}"/>
-        <ComboBox Grid.Column="1" MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding FromSuffix}" />
-        <TextBlock Grid.Column="2" MinWidth="30" Text="{Binding Result, ConverterCulture='da-DK', StringFormat=N2}" />
-        <ComboBox Grid.Column="3" MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding ToSuffix}" />
+        <TextBlock Grid.Column="0" Width="100" Text="{Binding Name}"/>
+        <TextBox Grid.Column="1" MinWidth="50" Text="{Binding FromValue}"/>
+        <ComboBox Grid.Column="2" MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding FromSuffix}" />
+        <TextBlock Grid.Column="3" MinWidth="30" Text="{Binding Result, ConverterCulture='da-DK', StringFormat=N2}" />
+        <ComboBox Grid.Column="4" MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding ToSuffix}" />
     </Grid>
 </UserControl>

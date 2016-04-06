@@ -41,46 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AreaConverters\AcreAreaConverter.cs" />
-    <Compile Include="AreaConverters\IAreaConverter.cs" />
-    <Compile Include="AreaConverters\InchAreaConverter.cs" />
-    <Compile Include="AreaConverters\CentimeterAreaConverter.cs" />
-    <Compile Include="AreaConverters\MileAreaConverter.cs" />
-    <Compile Include="AreaConverters\KilometerAreaConverter.cs" />
-    <Compile Include="AreaConverters\MeterAreaConverter.cs" />
-    <Compile Include="AreaConverters\YardAreaConverter.cs" />
-    <Compile Include="ConverterController.cs" />
-    <Compile Include="ConverterAndInfo.cs" />
-    <Compile Include="DistanceConverters\CentimetreConverter.cs" />
-    <Compile Include="ConverterInformationAttribute.cs" />
-    <Compile Include="DistanceConverters\FootConverter.cs" />
-    <Compile Include="IConverter.cs" />
-    <Compile Include="VolumeConverters\CentimetreVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\FluidOunceImperialVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\FluidOunceUSVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\FootVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\GallonImperialVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\GallonUSVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\InchVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\IVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\LitreVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\PintImperialVolumeConverter.cs" />
-    <Compile Include="VolumeConverters\PintUSVolumeConverter.cs" />
-    <Compile Include="WeightConverters\GramWeightConverter.cs" />
-    <Compile Include="WeightConverters\HundredweightWeightConverter.cs" />
-    <Compile Include="WeightConverters\IWeightConverter.cs" />
-    <Compile Include="DistanceConverters\KilometreConverter.cs" />
-    <Compile Include="DistanceConverters\MetreConverter.cs" />
-    <Compile Include="DistanceConverters\IDistanceConverter.cs" />
-    <Compile Include="DistanceConverters\InchConverter.cs" />
-    <Compile Include="DistanceConverters\MileConverter.cs" />
-    <Compile Include="DistanceConverters\NauticalMileConverter.cs" />
+    <Compile Include="Converters\AreaRatios.cs" />
+    <Compile Include="Converters\Converter.cs" />
+    <Compile Include="Converters\RatiosAndInfo.cs" />
+    <Compile Include="Converters\RatioFinder.cs" />
+    <Compile Include="Converters\RatiosInfoAttribute.cs" />
+    <Compile Include="Converters\IRatios.cs" />
+    <Compile Include="Converters\WeightRatios.cs" />
+    <Compile Include="Converters\IConverter.cs" />
+    <Compile Include="Converters\DistanceRatios.cs" />
+    <Compile Include="Converters\UniversalRatio.cs" />
+    <Compile Include="Converters\VolumeRatio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DistanceConverters\YardConverter.cs" />
-    <Compile Include="WeightConverters\OunceWeightConverter.cs" />
-    <Compile Include="WeightConverters\PoundWeightConverter.cs" />
-    <Compile Include="WeightConverters\StoneWeightConverter.cs" />
-    <Compile Include="WeightConverters\TonWeightConverter.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

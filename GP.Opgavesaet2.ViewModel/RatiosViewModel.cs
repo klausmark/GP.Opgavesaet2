@@ -1,21 +1,21 @@
 ﻿using System.Collections.Generic;
-using GP.Opgavesaet2.Opgave22;
+using GP.Opgavesaet2.Opgave22.Converters;
 
 namespace GP.Opgavesaet2.ViewModel
 {
-    public class ConverterViewModel<T> : NotifyBase where T : IConverter
+    public class RatiosViewModel : NotifyBase
     {
-        private readonly ConverterController<T> _converterController;
+        private readonly IConverter _converter;
         private string _fromSuffix;
         private decimal _fromValue;
         private string _toSuffix;
 
-        public ConverterViewModel(ConverterController<T> converterController)
+        public RatiosViewModel(IConverter converter)
         {
+            _converter = converter;
             _fromValue = 1;
-            _converterController = converterController;
-            _converterController.UpdateConverters();
-            Suffixes = new List<string>(_converterController.GetListOfConverterSuffixes());
+            Suffixes = new List<string>(_converter.Suffixes);
+            Name = _converter.Name;
             if (Suffixes.Count > 0)
             {
                 FromSuffix = Suffixes[0];
@@ -61,12 +61,17 @@ namespace GP.Opgavesaet2.ViewModel
             set { SetField(value); }
         }
 
+        public string Name
+        {
+            get { return GetField<string>(); }
+            set { SetField(value); }
+        }
+
         private void Calculate()
         {
             if (FromSuffix == null || ToSuffix == null) return;
 
-            var universalValue = _converterController.GetConverter(FromSuffix).ConvertToUniversalValue(FromValue);
-            Result = _converterController.GetConverter(ToSuffix).ConvertFromUniversalValue(universalValue);
+            Result = _converter.Convert(FromValue, FromSuffix, ToSuffix);
         }
     }
 }
