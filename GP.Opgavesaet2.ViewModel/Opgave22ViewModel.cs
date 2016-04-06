@@ -9,7 +9,7 @@ namespace GP.Opgavesaet2.ViewModel
         public Opgave22ViewModel()
         {
             RatiosViewModels = new RatioFinder()
-                .GetRatios()
+                .GetRatiosAnInfo()
                 .OrderBy(ratiosAndInfo => ratiosAndInfo.RatiosInfoAttribute.Name)
                 .Select(ratiosAndInfo => new RatiosViewModel(new Converter(ratiosAndInfo.Ratios, ratiosAndInfo.RatiosInfoAttribute.Name)))
                 .ToList();

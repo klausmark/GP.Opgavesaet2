@@ -7,7 +7,7 @@ namespace GP.Opgavesaet2.Opgave22.Converters
 {
     public class RatioFinder
     {
-        public IEnumerable<RatiosAndInfo> GetRatios()
+        public IEnumerable<RatiosAndInfo> GetRatiosAnInfo()
         {
             return Assembly.GetExecutingAssembly()
                 .GetTypes()

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace GP.Opgavesaet2.View.UserControls
 {
     /// <summary>
-    /// Interaction logic for ConverterUserControl.xaml
+    /// Interaction logic for RatiosUserControl.xaml
     /// </summary>
-    public partial class ConverterUserControl : UserControl
+    public partial class RatiosUserControl : UserControl
     {
-        public ConverterUserControl()
+        public RatiosUserControl()
         {
             InitializeComponent();
         }
