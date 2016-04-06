@@ -3,10 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:GP.Opgavesaet2.ViewModel;assembly=GP.Opgavesaet2.ViewModel"
              mc:Ignorable="d" 
              DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=Opgave26ViewModel}"
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type vm:SelectableCondiment}">
+            <CheckBox Content="{Binding Name}" IsChecked="{Binding Selected}"/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:VisibleDrink}">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+    </UserControl.Resources>
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.6 - Varme drikke"/>
+        <StackPanel>
+            <ComboBox ItemsSource="{Binding HotDrinks}" SelectedItem="{Binding SelectedDrink}" />
+            <ListView ItemsSource="{Binding Condiments}" />
+            <Button Command="{Binding CalculateCommand}" Content="Beregn"/>
+            <TextBlock Text="Pris:" />
+            <TextBlock Text="{Binding Price}" />
+        </StackPanel>
     </DockPanel>
 </UserControl>
