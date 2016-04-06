@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayToPrettyStringExtension.cs" />
+    <Compile Include="DelegateCommand.cs" />
     <Compile Include="RatiosViewModel.cs" />
     <Compile Include="NotifyBase.cs" />
     <Compile Include="Opgave26ViewModel.cs" />

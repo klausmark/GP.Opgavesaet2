@@ -1,9 +1,14 @@
-﻿using GP.Opgavesaet2.Opgave23;
+﻿using System;
+using GP.Opgavesaet2.Opgave23;
 
 namespace GP.Opgavesaet2.ViewModel
 {
     public class Opgave23ViewModel : NotifyBase
     {
+        public Opgave23ViewModel()
+        {
+            Year = DateTime.Now.Year;
+        }
         public int Year
         {
             get { return GetField<int>(); }

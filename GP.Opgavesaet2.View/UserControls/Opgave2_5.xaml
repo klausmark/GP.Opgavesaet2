@@ -7,6 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
-        <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.5"/>
+        <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.5 - Valutaberegner"/>
+        <StackPanel>
+            <TextBlock Text="Beløb i danske kroner:" />
+            <TextBox Text="{Binding Amount}" />
+            <TextBlock Text="Vekselsum (pris for 100):" />
+            <TextBox Text="{Binding ExchangeRate}" />
+            <TextBlock Text="For det antal kroner får du så mange i den anden valuta:" />
+            <TextBlock Text="{Binding Result}" />
+            <Grid DockPanel.Dock="Left">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Beregn" Command="{Binding CalculateCommand}" />
+                <Button Grid.Column="1" Content="Slet" Command="{Binding EraseCommand}" />
+            </Grid>
+        </StackPanel>
     </DockPanel>
 </UserControl>
