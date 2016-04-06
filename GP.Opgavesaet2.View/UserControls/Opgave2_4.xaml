@@ -8,5 +8,12 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.4"/>
+        <StackPanel>
+            <TextBlock Text="Indtast alder" />
+            <TextBox Text="{Binding Age}" />
+            <CheckBox IsChecked="{Binding IsStudent}" Content="Student"/>
+            <TextBlock Text="Pris" />
+            <TextBlock Text="{Binding Price}" />
+        </StackPanel>
     </DockPanel>
 </UserControl>

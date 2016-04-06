@@ -8,5 +8,10 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.3"/>
+        <StackPanel>
+            <TextBlock Text="Indtast år" />
+            <TextBox Text="{Binding Year}"/>
+            <TextBlock Text="{Binding LeapDescription}" />
+        </StackPanel>
     </DockPanel>
 </UserControl>

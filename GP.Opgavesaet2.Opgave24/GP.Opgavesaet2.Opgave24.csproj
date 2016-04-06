@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B5DCE1D-C385-4E64-9847-0B89A2A8D879}</ProjectGuid>
+    <ProjectGuid>{9ED1A38B-CC50-473C-927B-5737A8EE0DA9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GP.Opgavesaet2.ViewModel</RootNamespace>
-    <AssemblyName>GP.Opgavesaet2.ViewModel</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>GP.Opgavesaet2.Opgave24</RootNamespace>
+    <AssemblyName>GP.Opgavesaet2.Opgave24</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,34 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayToPrettyStringExtension.cs" />
-    <Compile Include="RatiosViewModel.cs" />
-    <Compile Include="NotifyBase.cs" />
-    <Compile Include="Opgave26ViewModel.cs" />
-    <Compile Include="Opgave21ViewModel.cs" />
-    <Compile Include="Opgave22ViewModel.cs" />
-    <Compile Include="Opgave23ViewModel.cs" />
-    <Compile Include="Opgave24ViewModel.cs" />
-    <Compile Include="Opgave25ViewModel.cs" />
+    <Compile Include="TicketCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GP.Opgavesaet2.Opgave21\GP.Opgavesaet2.Opgave21.csproj">
-      <Project>{8aa1efdf-049d-4369-b11e-b640c1bb45f5}</Project>
-      <Name>GP.Opgavesaet2.Opgave21</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GP.Opgavesaet2.Opgave22\GP.Opgavesaet2.Opgave22.csproj">
-      <Project>{998b0c23-291f-4494-8942-33400cc49242}</Project>
-      <Name>GP.Opgavesaet2.Opgave22</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GP.Opgavesaet2.Opgave23\GP.Opgavesaet2.Opgave23.csproj">
-      <Project>{ed03c8f3-b28c-4fbd-a61e-946bd98e9eca}</Project>
-      <Name>GP.Opgavesaet2.Opgave23</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GP.Opgavesaet2.Opgave24\GP.Opgavesaet2.Opgave24.csproj">
-      <Project>{9ed1a38b-cc50-473c-927b-5737a8ee0da9}</Project>
-      <Name>GP.Opgavesaet2.Opgave24</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
