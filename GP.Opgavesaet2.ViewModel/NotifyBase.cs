@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -43,6 +44,20 @@ namespace GP.Opgavesaet2.ViewModel
             else
             {
                 SetBackingField(value, propertyName);
+            }
+        }
+
+        protected virtual void SetFieldAndInvokeMethod<T>(T value, Action method, [CallerMemberName] string propertyName = "")
+        {
+            var tmp = GetField<T>(propertyName);
+            SetField(value, propertyName);
+            try
+            {
+                method.Invoke();
+            }
+            catch (Exception)
+            {
+                SetField(tmp, propertyName);
             }
         }
 

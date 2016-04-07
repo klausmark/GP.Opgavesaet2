@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ArrayToStringConverter.cs" />
     <Compile Include="UserControls\RatiosUserControl.xaml.cs">
       <DependentUpon>RatiosUserControl.xaml</DependentUpon>
     </Compile>
@@ -146,6 +147,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GP.Opgavesaet2.Opgave21\GP.Opgavesaet2.Opgave21.csproj">
+      <Project>{8aa1efdf-049d-4369-b11e-b640c1bb45f5}</Project>
+      <Name>GP.Opgavesaet2.Opgave21</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GP.Opgavesaet2.ViewModel\GP.Opgavesaet2.ViewModel.csproj">
       <Project>{4b5dce1d-c385-4e64-9847-0b89a2a8d879}</Project>
       <Name>GP.Opgavesaet2.ViewModel</Name>
