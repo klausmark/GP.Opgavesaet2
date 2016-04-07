@@ -15,6 +15,40 @@
     </UserControl.Resources>
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" FontSize="20" TextAlignment="Center" Text="Opgave 2.2 - Imperial to metric"/>
-        <ListView ItemsSource="{Binding RatiosViewModels}" />
+        <ListView ItemsSource="{Binding RatiosViewModels}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Værdi">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox MinWidth="50"  Text="{Binding FromValue}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Fra">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <ComboBox MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding FromSuffix}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Til">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <ComboBox MinWidth="50" ItemsSource="{Binding Suffixes}" SelectedItem="{Binding ToSuffix}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Resultat">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock MinWidth="30" Text="{Binding Result, ConverterCulture='da-DK', StringFormat=N2}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </DockPanel>
 </UserControl>
